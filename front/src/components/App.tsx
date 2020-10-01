@@ -1,5 +1,5 @@
 import React from "react"
-import SellPage from "./pages/SellPage"
+import SellPage from "./SellPage"
 
 export default class App extends React.Component {
     render(): JSX.Element {

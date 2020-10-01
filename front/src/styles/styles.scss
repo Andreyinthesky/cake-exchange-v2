@@ -1,50 +1,71 @@
-.page {
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  font-family: Arial,
+    Helvetica,
+    sans-serif;
   font-size: 14px;
+
+  background-color: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+
+  background-color: #ffffff;
 }
 
 .button {
-    min-width: 100px;
-    background-color: #eeeeee;
-    text-transform: uppercase;
-    font-weight: bold;
+  min-width: 100px;
+  padding: 8px;
+
+  border: 1px solid #333333;
+  border-radius: 8px;
+  background-color: #eeeeee;
+
+  text-transform: uppercase;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px #000000;
+  }
+
+  &:hover {
+    background-color: #dddddd;
+  }
+
+  &:active {
+    background-color: #bbbbbb;
+  }
 }
 
-.order-form {
-  border: 1px solid #000000;
-  max-width: 400px;
-  padding: 24px;
-  position: relative;
+.section {
+  flex-basis: 100%;
 
-  &__body {
-    display: flex;
-    flex-direction: column;
+  &--orders {
+    flex-basis: 50%;
   }
+}
 
-  &__header {
-    margin: 0;
-    padding: 0 4px;
-
-    position: absolute;
-    top: 0;
-    left: 20px;
-    transform: translateY(-50%);
-    
-    background-color: #ffffff;
-  }
-
-  &__field {
-    display: flex;
-    margin-bottom: 16px;
-  }
-
-  &__input {
-    display: block;
-    flex-grow: 1;
-  }
-
-  &__label {
-    display: inline-block;
-    min-width: 100px;
+@media (min-width: 1200px) {
+  .page {
+    width: 1200px;
   }
 }

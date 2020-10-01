@@ -1,21 +1,32 @@
 import React, { Component } from "react"
+import "./OrderForm.style.scss"
 
 let mountCount = 0;
 
-export default class OrderForm extends Component {
+interface IOrderFormProps {
+    title?: string
+}
+
+export default class OrderForm extends Component<IOrderFormProps, {}> {
     id: number;
-    constructor(props: object) {
+
+    public static defaultProps = {
+        title: "Форма"
+    }
+
+    constructor(props: IOrderFormProps) {
         super(props);
 
         this.id = ++mountCount
     }
 
     render(): JSX.Element {
-        const { id } = this;
+        const { id, props } = this;
+        const { title } = props;
 
         return (
             <div className="order-form">
-                <h3 className="order-form__header">Купить</h3>
+                <h3 className="order-form__header">{title}</h3>
                 <div className="order-form__body">
                     <div className="order-form__field">
                         <label className="order-form__label" htmlFor={`price${id}`}>Цена за шт.</label>

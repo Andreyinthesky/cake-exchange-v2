@@ -1,24 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
+import OrdersTable from "./OrdersTable/OrdersTable"
 
-export default class SellOrdersTable extends Component {
-    render(): JSX.Element {
-        return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Цена</th>
-                        <th>Кол-во</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>test@mail.ru</td>
-                    </tr>
-                </tbody>
-            </table>
-        )
-    }
-};
+export default function SellOrdersTable() {
+    return <OrdersTable title="Ордера на продажу"></OrdersTable>
+} 

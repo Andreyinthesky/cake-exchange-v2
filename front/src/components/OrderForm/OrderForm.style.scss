@@ -1,0 +1,38 @@
+.order-form {
+  border: 1px solid #000000;
+  max-width: 400px;
+  padding: 24px;
+  position: relative;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    margin: 0;
+    padding: 0 4px;
+
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-50%);
+
+    background-color: #ffffff;
+  }
+
+  &__field {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    display: block;
+    flex-grow: 1;
+  }
+
+  &__label {
+    display: inline-block;
+    min-width: 100px;
+  }
+}
